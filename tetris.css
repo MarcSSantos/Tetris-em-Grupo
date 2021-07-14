@@ -1,17 +1,72 @@
-.grid {
-    width: 200px;
-    height: 400px;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 3rem;
+}  
+
+.grid-tetris {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 5rem;
+}
+
+.left-column {
     display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(255, 102, 0);
 }
 
-.grid div {
-    width: 20px;
-    height: 20px;
-    background-color: #1de70a;
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
 }
 
-.tetromino {
-    background-color: blue;
+#score{
+    display: inline-block;
+}
+
+.background-prox-bloco {
+    display: flex;
+    flex-direction: column;
+    background: brown;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+div{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+}
+canvas{
+    display: block;
+    margin:0 auto;
+}
+
+#play-button,
+#pause-button {
+    color: white;
+    background: blue;
+    transition: transform 1s;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: none;
+    transform:scale(.8);
+    width: 20rem;
+    height: 8rem;
 }
